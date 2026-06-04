@@ -74,7 +74,7 @@ export function Navbar() {
                 "hidden rounded-none px-6 tracking-[0.15em] uppercase sm:inline-flex"
               )}
             >
-              Book Stay
+              Book Now
             </Link>
             <button
               type="button"
@@ -119,7 +119,7 @@ export function Navbar() {
               "mt-4 rounded-none px-8 tracking-[0.15em] uppercase"
             )}
           >
-            Book Your Stay
+            Book Now
           </Link>
         </nav>
       </motion.div>
