@@ -49,7 +49,7 @@ export const rooms: Room[] = [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=80",
     images: [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=80",
-      "https://images.unsplash.com/photo-1618773928123-c32242e63f39?w=1200&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
     ],
     capacity: 6,
     size: "320 m²",
@@ -65,10 +65,10 @@ export const rooms: Room[] = [
     description:
       "Serene botanical views, warm natural textures, and thoughtful details for an intimate luxury retreat.",
     image:
-      "https://images.unsplash.com/photo-1611892440502-42faecaf6f44?w=1200&q=80",
+      "https://images.unsplash.com/photo-1662519951792-029952e7556b?w=1200&q=80",
     images: [
-      "https://images.unsplash.com/photo-1611892440502-42faecaf6f44?w=1200&q=80",
-      "https://images.unsplash.com/photo-1595577505425-775d5f4b4368?w=1200&q=80",
+      "https://images.unsplash.com/photo-1662519951792-029952e7556b?w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80",
     ],
     capacity: 2,
     size: "55 m²",

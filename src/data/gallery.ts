@@ -19,7 +19,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "g-3",
-    src: "https://images.unsplash.com/photo-1540555700478-4be289fbec6f?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1769011496342-2bd1ad232d8f?w=800&q=80",
     alt: "Luxury spa treatment room",
     category: "spa",
     width: 800,
@@ -83,7 +83,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "g-11",
-    src: "https://images.unsplash.com/photo-1576011001622-25692b227031?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1731080647266-85cf1bc27162?w=800&q=80",
     alt: "Rooftop pool at sunset",
     category: "pool",
     width: 800,

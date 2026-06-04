@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
       "Begin your day with guided breathwork and yoga as the first light paints the horizon in gold.",
     duration: "90 minutes",
     image:
-      "https://images.unsplash.com/photo-1545205597-3ba9fc4a0f6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
     tag: "Wellness",
   },
   {
@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
       "An exclusive journey through our 5,000-bottle cellar with our head sommelier and rare vintages.",
     duration: "2 hours",
     image:
-      "https://images.unsplash.com/photo-1510812431400-574042155581?w=800&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     tag: "Culinary",
   },
   {
