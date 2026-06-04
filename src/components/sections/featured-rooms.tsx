@@ -35,14 +35,14 @@ export function FeaturedRoomsSection() {
           className="mt-16 flex justify-center"
         >
           <Link
-            href="/book"
+            href="#booking"
             data-cursor-hover
             className={cn(
               buttonVariants({ variant: "outline" }),
               "group rounded-none border-champagne/30 px-8 tracking-[0.15em] uppercase hover:border-champagne"
             )}
           >
-            View All Accommodations
+            Check Availability
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>

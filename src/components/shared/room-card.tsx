@@ -36,10 +36,18 @@ export function RoomCard({ room, index = 0 }: RoomCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-bg-deep via-bg-deep/20 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-95" />
+          {/* Stronger scrim for readable text on bright photos */}
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-bg-deep via-bg-deep/55 to-transparent"
+            aria-hidden
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-bg-deep from-25% via-bg-deep/90 to-transparent"
+            aria-hidden
+          />
 
           {/* Default info bar */}
-          <div className="absolute inset-x-0 bottom-0 p-6 transition-all duration-500 group-hover:translate-y-full group-hover:opacity-0">
+          <div className="absolute inset-x-0 bottom-0 p-6 transition-all duration-500 [@media(hover:hover)]:group-hover:translate-y-full [@media(hover:hover)]:group-hover:opacity-0">
             <div className="flex items-center gap-1 text-champagne">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star
@@ -56,17 +64,27 @@ export function RoomCard({ room, index = 0 }: RoomCardProps) {
                 {room.rating.toFixed(1)}
               </span>
             </div>
-            <h3 className="mt-2 font-heading text-2xl text-foreground">
+            <h3 className="mt-2 min-h-[3.25rem] line-clamp-2 font-heading text-2xl leading-snug text-foreground drop-shadow-sm">
               {room.name}
             </h3>
-            <p className="mt-1 text-sm text-champagne">
+            <p className="mt-1 text-sm text-champagne drop-shadow-sm">
               from {formatPrice(room.pricePerNight)}
               <span className="text-text-muted"> / night</span>
             </p>
+            <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-muted">
+              <span className="flex items-center gap-1.5">
+                <Users className="size-3.5 shrink-0 text-champagne" />
+                {room.capacity} Guests
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Maximize2 className="size-3.5 shrink-0 text-champagne" />
+                {room.size}
+              </span>
+            </div>
           </div>
 
           {/* Glass overlay on hover */}
-          <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:opacity-100">
+          <div className="absolute inset-0 hidden flex-col justify-end p-6 opacity-0 backdrop-blur-sm transition-all duration-500 [@media(hover:hover)]:flex [@media(hover:hover)]:group-hover:opacity-100">
             <div className="glass-luxury-strong translate-y-4 p-6 transition-transform duration-500 group-hover:translate-y-0">
               <div className="flex items-center justify-between gap-4">
                 <h3 className="font-heading text-xl text-foreground">
