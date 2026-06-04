@@ -2,15 +2,21 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { brand } from "@/lib/design-tokens";
 
 export function LoadingScreen() {
+  const reducedMotion = useReducedMotion();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (reducedMotion) {
+      setLoading(false);
+      return;
+    }
     const timer = setTimeout(() => setLoading(false), 1800);
     return () => clearTimeout(timer);
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <AnimatePresence mode="wait">

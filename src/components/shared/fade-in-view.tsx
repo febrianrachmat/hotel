@@ -1,6 +1,9 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+const easeLuxury = [0.22, 1, 0.36, 1] as const;
 
 const defaultVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
@@ -22,6 +25,12 @@ export function FadeInView({
   duration = 0.7,
   once = true,
 }: FadeInViewProps) {
+  const reducedMotion = useReducedMotion();
+
+  if (reducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       className={className}
@@ -29,7 +38,7 @@ export function FadeInView({
       whileInView="visible"
       viewport={{ once, margin: "-80px" }}
       variants={defaultVariants}
-      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration, delay, ease: easeLuxury }}
     >
       {children}
     </motion.div>

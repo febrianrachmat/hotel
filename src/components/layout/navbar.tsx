@@ -54,7 +54,7 @@ export function Navbar() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-6 xl:flex xl:gap-8">
             {mainNavigation.map((link) => (
               <Link
                 key={link.href}

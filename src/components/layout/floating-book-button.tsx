@@ -23,7 +23,7 @@ export function FloatingBookButton() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 24, scale: 0.9 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed right-6 bottom-6 z-50 md:right-10 md:bottom-10"
+          className="fixed right-4 bottom-4 z-50 sm:right-6 sm:bottom-6 md:right-10 md:bottom-10"
         >
           <Link
             href="/book"

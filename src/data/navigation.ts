@@ -7,6 +7,7 @@ export const mainNavigation: NavLink[] = [
   { label: "Experiences", href: "#experiences" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
+  { label: "Book", href: "/book" },
 ];
 
 export const footerNavigation: NavLink[] = [

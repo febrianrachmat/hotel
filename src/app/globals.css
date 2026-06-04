@@ -100,11 +100,26 @@
 
   html {
     @apply font-sans scroll-smooth;
+    scroll-padding-top: 6rem;
   }
 
   body {
     @apply bg-bg-deep text-foreground antialiased;
     font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
   h1,

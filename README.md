@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VELMONT — Luxury Hotel Booking Platform
+
+A premium frontend portfolio showcasing modern UI engineering for a fictional five-star hospitality brand.
+
+**Tagline:** *Extraordinary Stays. Timeless Elegance.*
+
+**Live demo:** Deploy to [Vercel](https://vercel.com) or run locally (see below).
+
+**Repository:** [github.com/febrianrachmat/hotel](https://github.com/febrianrachmat/hotel)
+
+---
+
+## Overview
+
+VELMONT is a **frontend-only** luxury hotel experience built to demonstrate:
+
+- Premium UI & editorial design
+- Responsive layouts (1920 → 375px)
+- Component-driven architecture
+- Framer Motion interactions
+- Mock booking & availability flows
+
+No backend, database, or payment integration — all data is simulated.
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| [Next.js 15](https://nextjs.org) | App Router, SSR/SSG |
+| [React 19](https://react.dev) | UI library |
+| [TypeScript](https://www.typescriptlang.org) | Type safety |
+| [Tailwind CSS v4](https://tailwindcss.com) | Styling |
+| [Framer Motion](https://www.framer.com/motion) | Animations |
+| [shadcn/ui](https://ui.shadcn.com) | Accessible UI primitives |
+| [Lucide Icons](https://lucide.dev) | Iconography |
+| [date-fns](https://date-fns.org) | Date utilities |
+| [Embla Carousel](https://www.embla-carousel.com) | Testimonial slider |
+
+---
+
+## Features
+
+### Landing Page
+
+- **Hero** — Full-screen imagery, staggered fade animations, CTAs
+- **Featured Suites** — Room cards with glassmorphism hover & pricing
+- **Availability Calendar** — Range picker with mock availability states
+- **Gallery** — Masonry grid, filters, lightbox with keyboard navigation
+- **Guest Reviews** — Editorial testimonial carousel
+- **Luxury Amenities** — Icon grid with hover elevation
+- **Dining, Experiences, About, FAQ, Contact** — Full hospitality sections
+- **Footer** — Navigation, newsletter, social links
+
+### Booking Demo (`/book`)
+
+1. Select room & guests  
+2. Guest information form  
+3. Booking summary with fees  
+4. Success confirmation screen  
+
+### Premium UX
+
+- Custom cursor (desktop)
+- Floating “Book Stay” CTA
+- Loading splash screen
+- Scroll progress indicator
+- Page transitions
+- `prefers-reduced-motion` support
+
+---
+
+## Project Structure
+
+```
+src/
+├── app/                 # Next.js routes
+├── components/
+│   ├── booking/         # Multi-step booking flow
+│   ├── layout/          # Navbar, footer, shell
+│   ├── sections/        # Page sections
+│   ├── shared/          # Reusable UI blocks
+│   └── ui/              # shadcn components
+├── data/                # Mock content
+├── hooks/               # Custom hooks
+├── lib/                 # Utilities & tokens
+└── types/               # TypeScript interfaces
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Install & run
 
 ```bash
+git clone https://github.com/febrianrachmat/hotel.git
+cd hotel
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design System
 
-## Deploy on Vercel
+| Token | Value |
+|-------|-------|
+| Luxury Black | `#111111` |
+| Warm Ivory | `#F8F5F0` |
+| Champagne Gold | `#C6A972` |
+| Background | `#0A0A0A` / `#121212` |
+| Heading font | Playfair Display |
+| Body font | Inter |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Recommended: [Vercel](https://vercel.com/new) — import the GitHub repo and deploy with default Next.js settings.
+
+Environment variables are **not required** for this project.
+
+---
+
+## Portfolio Notes
+
+This project is intentionally scoped as a **visual & interaction showcase** for recruiters and hiring managers evaluating frontend/UI engineering skills.
+
+---
+
+## License
+
+MIT — free to use for portfolio and learning purposes.

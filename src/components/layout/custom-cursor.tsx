@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const HOVER_SELECTOR = "a, button, [data-cursor-hover], input, select, textarea";
 
 export function CustomCursor() {
+  const reducedMotion = useReducedMotion();
   const [visible, setVisible] = useState(false);
   const [hovering, setHovering] = useState(false);
   const cursorX = useMotionValue(-100);
@@ -14,6 +16,7 @@ export function CustomCursor() {
   const springY = useSpring(cursorY, { stiffness: 500, damping: 40 });
 
   useEffect(() => {
+    if (reducedMotion) return;
     const isTouchDevice =
       "ontouchstart" in window || navigator.maxTouchPoints > 0;
     if (isTouchDevice) return;
@@ -52,9 +55,9 @@ export function CustomCursor() {
       document.removeEventListener("mouseover", onMouseOver);
       document.removeEventListener("mouseout", onMouseOut);
     };
-  }, [cursorX, cursorY]);
+  }, [cursorX, cursorY, reducedMotion]);
 
-  if (!visible) return null;
+  if (reducedMotion || !visible) return null;
 
   return (
     <>

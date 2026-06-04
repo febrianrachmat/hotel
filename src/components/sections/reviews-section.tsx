@@ -22,7 +22,7 @@ function ReviewCard({ index }: { index: number }) {
     <div className="flex flex-col items-center px-4 py-8 text-center md:px-12 md:py-12 lg:px-20">
       <Quote className="mb-6 size-10 text-champagne/40" />
 
-      <blockquote className="font-heading text-2xl leading-relaxed text-foreground md:text-3xl lg:text-4xl lg:leading-snug">
+      <blockquote className="font-heading text-xl leading-relaxed text-foreground sm:text-2xl md:text-3xl lg:text-4xl lg:leading-snug">
         &ldquo;{review.text}&rdquo;
       </blockquote>
 
