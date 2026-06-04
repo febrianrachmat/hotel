@@ -32,7 +32,7 @@ export function FloatingBookButton() {
           >
             <CalendarDays className="size-4 text-champagne transition-transform group-hover:scale-110" />
             <span className="text-xs tracking-[0.2em] text-foreground uppercase">
-              Book Stay
+              Book Now
             </span>
           </Link>
         </motion.div>

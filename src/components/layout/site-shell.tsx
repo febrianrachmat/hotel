@@ -15,12 +15,6 @@ interface SiteShellProps {
 export function SiteShell({ children, showFooter = true }: SiteShellProps) {
   return (
     <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10001] focus:border focus:border-champagne focus:bg-bg-deep focus:px-4 focus:py-2 focus:text-sm focus:text-champagne"
-      >
-        Skip to content
-      </a>
       <ScrollProgress />
       <LoadingScreen />
       <CustomCursor />
