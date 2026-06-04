@@ -4,3 +4,8 @@ export { AvailabilitySection } from "./availability-section";
 export { GallerySection } from "./gallery-section";
 export { ReviewsSection } from "./reviews-section";
 export { AmenitiesSection } from "./amenities-section";
+export { AboutSection } from "./about-section";
+export { DiningSection } from "./dining-section";
+export { ExperiencesSection } from "./experiences-section";
+export { FaqSection } from "./faq-section";
+export { ContactSection } from "./contact-section";
