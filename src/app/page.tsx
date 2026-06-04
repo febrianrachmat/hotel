@@ -1,9 +1,13 @@
 import { SiteShell } from "@/components/layout/site-shell";
-import { FeaturedRoomsSection, HeroSection } from "@/components/sections";
+import {
+  AvailabilitySection,
+  FeaturedRoomsSection,
+  GallerySection,
+  HeroSection,
+} from "@/components/sections";
 
 const sectionPlaceholders = [
   { id: "amenities", label: "Luxury Amenities" },
-  { id: "gallery", label: "Gallery" },
   { id: "dining", label: "Dining" },
   { id: "experiences", label: "Experiences" },
   { id: "about", label: "Our Story" },
@@ -16,6 +20,8 @@ export default function Home() {
     <SiteShell>
       <HeroSection />
       <FeaturedRoomsSection />
+      <AvailabilitySection />
+      <GallerySection />
 
       {sectionPlaceholders.map((section) => (
         <section
