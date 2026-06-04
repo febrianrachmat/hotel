@@ -1,21 +1,36 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { brand } from "@/lib/design-tokens";
 
+export const INTRO_STORAGE_KEY = "velmont-intro-complete";
+
 export function LoadingScreen() {
   const reducedMotion = useReducedMotion();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (reducedMotion) {
-      setLoading(false);
+  useLayoutEffect(() => {
+    if (reducedMotion) return;
+
+    try {
+      if (sessionStorage.getItem(INTRO_STORAGE_KEY) === "true") return;
+    } catch {
       return;
     }
-    const timer = setTimeout(() => setLoading(false), 1800);
-    return () => clearTimeout(timer);
+
+    setLoading(true);
+    const timer = window.setTimeout(() => {
+      try {
+        sessionStorage.setItem(INTRO_STORAGE_KEY, "true");
+      } catch {
+        /* ignore quota / private mode */
+      }
+      setLoading(false);
+    }, 1800);
+
+    return () => window.clearTimeout(timer);
   }, [reducedMotion]);
 
   return (

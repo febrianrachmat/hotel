@@ -12,8 +12,8 @@ export function CustomCursor() {
   const [hovering, setHovering] = useState(false);
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
-  const springX = useSpring(cursorX, { stiffness: 500, damping: 40 });
-  const springY = useSpring(cursorY, { stiffness: 500, damping: 40 });
+  const springX = useSpring(cursorX, { stiffness: 1800, damping: 55, mass: 0.15 });
+  const springY = useSpring(cursorY, { stiffness: 1800, damping: 55, mass: 0.15 });
 
   useEffect(() => {
     if (reducedMotion) return;
@@ -72,7 +72,7 @@ export function CustomCursor() {
             x: hovering ? -24 : -6,
             y: hovering ? -24 : -6,
           }}
-          transition={{ type: "spring", stiffness: 400, damping: 30 }}
+          transition={{ type: "spring", stiffness: 700, damping: 40, mass: 0.2 }}
           className="rounded-full border border-white bg-white/20 backdrop-blur-sm"
         />
       </motion.div>
