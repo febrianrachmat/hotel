@@ -161,6 +161,16 @@
   }
 }
 
+body.custom-cursor-active {
+  cursor: none;
+}
+
+body.custom-cursor-active a,
+body.custom-cursor-active button,
+body.custom-cursor-active [data-cursor-hover] {
+  cursor: none;
+}
+
 /* Subtle luxury scrollbar */
 @media (min-width: 768px) {
   ::-webkit-scrollbar {
